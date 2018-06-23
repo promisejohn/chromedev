@@ -1,0 +1,33 @@
+i<!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <title>Signin Template for Bootstrap </title>
+     <script src="static/jquery-3.3.1.js"> </script>
+     <script>
+        $(document).ready(function(){
+            $.ajax({
+              url: "/upcook",
+              method: "POST",
+              data: {
+                cook: '97201'
+              },
+              success: function( result ) {
+                $( "#mydiv" ).html( "<strong>" + result + "</strong>" );
+              }
+            });
+            });
+     </script>
+ </head>
+ 
+ <body>
+
+<div id='mydiv'>
+</div>
+   
+ </body>
+ 
+ </html>
